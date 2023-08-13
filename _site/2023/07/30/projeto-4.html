@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Development | THEROGERIOOS</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/png" href="/assets/images/avatar-1b.png">
+</head>
+<body>
+    <header class="header-menu">
+        <div class="name-logo">
+            THEROGERIOOS
+        </div>
+        <div class="option-menu">
+            <a class="item" href="/home">Página Inicial</a>
+            <a class="item" href="/portfolio/page1">Portfólio</a>
+            <a class="item" href="/tutoriais/page1">Tutoriais</a>
+            <a class="item" href="/curriculo">Currículo</a>
+            <a class="item" href="#">Sobre mim</a>
+        </div>
+        <div class="social-icons-header">
+            <a href="mailto:therogerioos@gmail.com?subject=Fale Conosco&body=Olá, THEROGERIOOS Team"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>       
+    </header>
+  
+    <section class="section-pages-post">
+        <div class="card-post-text">
+            <h1 id="css---cascading-style-sheets">CSS - Cascading Style Sheets</h1>
+
+<p>O CSS (Cascading Style Sheets) é uma das tecnologias fundamentais da web moderna. Ele desempenha um papel crucial na apresentação e no design de páginas da web, permitindo que os desenvolvedores controlem o layout, as cores, as fontes e outros aspectos visuais de um site. Neste artigo, exploraremos o que é CSS, como funciona e por que é tão importante na criação de páginas web atraentes e funcionais.</p>
+
+<h2 id="o-que-é-css">O que é CSS?</h2>
+
+<p>CSS é uma linguagem de estilo usada para definir a aparência e o layout de documentos escritos em HTML, XHTML e XML. Ele trabalha em conjunto com essas linguagens de marcação para dar forma ao conteúdo e torná-lo visualmente atraente para os visitantes do site. O CSS é uma das tecnologias-chave que permite a separação entre conteúdo e apresentação em um site.
+<img class="img-direita-post" src="/assets/images/Firmware-cuate.svg" alt="Descrição da imagem" /></p>
+
+<p>Antes do CSS, o design das páginas da web era realizado principalmente através do uso extensivo de atributos HTML embutidos. No entanto, isso resultava em código HTML confuso e difícil de manter. Com a introdução do CSS, os desenvolvedores podiam colocar todo o estilo em um arquivo separado e, em seguida, associá-lo a várias páginas HTML. Essa abordagem tornou o código mais limpo, mais organizado e mais fácil de atualizar.</p>
+
+<h2 id="como-funciona-o-css">Como funciona o CSS?</h2>
+
+<p>O funcionamento do CSS é baseado no conceito de “cascata”. Quando um navegador renderiza uma página da web, ele segue um processo de cascata para aplicar os estilos aos elementos da página. O CSS permite que você defina estilos para diferentes elementos HTML e, quando várias regras se aplicam ao mesmo elemento, o navegador segue uma ordem específica para determinar qual estilo deve ser aplicado.</p>
+
+<h2 id="a-ordem-de-cascata-do-css-é-a-seguinte">A ordem de cascata do CSS é a seguinte:</h2>
+
+<p><strong>Estilos Inline</strong>: Os estilos inline têm a maior prioridade e são definidos diretamente nos elementos HTML usando o atributo style.</p>
+
+<p><strong>Estilos Internos</strong>: Os estilos internos são definidos na seção **<style>** dentro do cabeçalho da página.</style></p>
+
+<p><strong>Estilos Externos</strong>: Os estilos externos são definidos em um arquivo CSS separado e vinculados à página usando o elemento <strong><link /></strong>.</p>
+
+<p><strong>Estilos Padrão do Navegador</strong>: Se nenhum dos estilos acima for aplicado, o navegador aplicará seus próprios estilos padrão para elementos HTML.</p>
+
+<h2 id="sintaxe-do-css">Sintaxe do CSS</h2>
+
+<p>O CSS usa uma sintaxe simples e intuitiva para definir os estilos. As regras do CSS consistem em um seletor e um bloco de declarações, onde cada declaração define uma propriedade e um valor.</p>
+
+<p>Aqui está um exemplo de uma regra CSS:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Neste exemplo, p é o seletor que seleciona todos os elementos <strong>&lt;p&gt;</strong> na página. As declarações dentro do bloco definem a fonte, o tamanho da fonte e a cor do texto para todos os parágrafos na página.</p>
+
+<h2 id="seletores-css">Seletores CSS</h2>
+
+<p>Os seletores CSS permitem que você aplique estilos a elementos específicos ou grupos de elementos na página. Alguns exemplos de seletores CSS comuns incluem:</p>
+
+<p><strong>element</strong>: Seletor para elementos HTML específicos (por exemplo, <strong>p</strong>, <strong>h1</strong>, <strong>a</strong>).</p>
+
+<p><strong>.classe</strong>: Seletor para elementos com uma classe específica (por exemplo, <strong>.destaque</strong>).</p>
+
+<p><strong>#id</strong>: Seletor para um único elemento com um ID específico (por exemplo, <strong>#cabecalho</strong>).</p>
+
+<p><strong>seletor1, seletor2</strong>: Seletor para vários elementos (por exemplo, <strong>h1</strong>, <strong>h2</strong>).</p>
+
+<h2 id="propriedades-css">Propriedades CSS</h2>
+
+<p>As propriedades CSS definem os estilos que você deseja aplicar aos elementos selecionados. Algumas propriedades CSS comuns incluem:</p>
+
+<p><img class="img-esquerda-post" src="/assets/images/Inbox-cleanup-pana.svg" alt="Descrição da imagem" /></p>
+
+<p><strong>font-family</strong>: Define a família da fonte a ser usada.</p>
+
+<p><strong>font-size</strong>: Define o tamanho da fonte.</p>
+
+<p><strong>font-style</strong>: Define a propriedades de estilos que podem ser: normal, italic ou oblique.</p>
+
+<p><strong>font-weight</strong>: Define a propriedade de intensidade de uma fonte na sequência de valores de ‘100’ a ‘900’, cada número indica uma fonte mais intensa (escura) que o valor anterior.</p>
+
+<p><strong>color</strong>: Define a cor do texto.</p>
+
+<p><strong>background-color</strong>: Define a cor de fundo do elemento.</p>
+
+<p><strong>margin</strong>: Define as margens do elemento.</p>
+
+<p><strong>padding</strong>: Define o preenchimento do elemento.</p>
+
+<p><strong>border</strong>: Define a borda do elemento.</p>
+
+<p>Esses são apenas alguns exemplos das muitas propriedades CSS disponíveis para estilizar os elementos na página.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>O CSS é uma ferramenta poderosa e essencial para o desenvolvimento de páginas da web modernas. Ele permite que os desenvolvedores controlem a aparência e o layout de seus sites, tornando-os visualmente atraentes e agradáveis para os visitantes. Com a capacidade de separar a apresentação do conteúdo, o CSS oferece maior flexibilidade e organização ao código HTML. Ao dominar o CSS, os desenvolvedores podem criar páginas da web incríveis que impressionam os usuários e proporcionam uma experiência agradável na web.</p>
+
+
+        </div>
+    </section>
+    
+    <footer class="footer-rodape">
+        <div class="final-page-bg">
+            <h4>Desenvolvido por:</h4>
+            <div class="footer-name-logo">THEROGERIOOS</div>
+            <h5 class="copy">2023 @ Todos Direitos Reservados</h5>    
+        </div>
+        <div class="mapa-site">
+            <h4 class="home">Página Inicial</h4>
+            <h4 class="port">Portfólio</h4>
+            <h4 class="tuto">Tutoriais</h4>
+            <h4 class="curri">Currículo</h4>
+            <h4 class="about">Sobre mim</h4>
+        </div>
+        <div class="frase">
+            "Seja o escritor de sua própria história!!"
+        </div>
+        <div class="social-icons-footer">
+            <a href="mailto:therogerioos@gmail.com?subject=Fale Conosco&body=Olá, THEROGERIOOS Team"><i class="fa-solid fa-envelope footer-redes"></i></a>
+            <a href="#" target="_blank">
+                <i class="fa-brands fa-github footer-redes"></i>
+            </a>
+            <a href="#" target="_blank">
+                <i class="fa-brands fa-linkedin footer-redes"></i>
+            </a>
+        </div> 
+    </footer>  
+  
+  <script src="/assets/js/engine.js"></script>
+</body>
+</html>
