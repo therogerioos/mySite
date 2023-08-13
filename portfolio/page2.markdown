@@ -13,7 +13,7 @@ last_page: 0
             <a href="#" class="page-link ir" id="pagination-link" data-page-number="{{ page.page_number }}" data-last-page="{{ page.last_page }}" onclick="goToNextPage()">Próximo <i class="fa-solid fa-angles-right"></i></a>
   </div>
   {% for post in site.posts %}
-    {% if post.path contains '{{ site.baseurl }}/portfolio/page2' %}
+    {% if post.path contains '/portfolio/page2' %}
       <div class="card-post">
         <img src="{{ post.image }}" alt="{{ post.title }}">
         <div class="text-post">
