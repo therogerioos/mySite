@@ -17,7 +17,7 @@ last_page: 1
       <div class="card-post">
         <img src="{{ post.image }}" alt="{{ post.title }}">
         <div class="text-post">
-          <a class="title-post" href="{{ site.baseurl }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
+          <a class="title-post" href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
           <h4>{{ post.resumo }}</h4>
         </div>
       </div>
