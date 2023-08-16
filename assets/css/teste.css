@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .name-logo1 {
+    font-size: 24px;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+    
+    .hamburger.open .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 5px);
+    }
+    
+    .hamburger.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.open .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+    
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 2px 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .option-menu1 {
+      flex-direction: column;
+      list-style: none;
+      display: none;
+    }
+    
+    .option-menu1 li {
+        margin-right: 20px;
+      }
+      
+      .option-menu1 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .option-menu1.show {
+        display: block;
+        background-color: rgb(17, 16, 16);
+
+      }
+  }

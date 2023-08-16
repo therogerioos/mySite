@@ -20,6 +20,10 @@
     z-index: 100;
 }
 
+.header-phone{
+    display: none;
+}
+
 .name-logo{
     color: #FFF;
     text-shadow: 8px 5px 16px 0px rgba(99, 98, 98, 0.306);
@@ -707,9 +711,220 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
     padding-top: 20px;
 
 }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
   
+/* Estilos para telas entre 320px e 940px */
+@media (min-width: 310px) and (max-width: 940px) {
+
+    .name-logo{
+        font-size: 60px;
+    }
+
+    .header-menu{
+        width: 75rem;
+        height: 10rem; 
+        position: fixed; 
+    }
+
+    .section-pages-1{
+        width: 71.2rem;
+        height: 51rem;
+    }
+
+    .section-pages-2{
+        width: 71.2rem;
+        height: 51rem;
+
+    }
+
+    .section-pages-3{
+        padding-top: 50rem;
+    }
+
+    .radio-nav{
+        display: none;
+    }
+
+    .hi{
+        position: absolute;
+        font-size: 5.5rem;
+        padding-top: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .name-persona{
+        font-size: 5.5rem;
+        padding-left: 12.5rem;
+
+    }
+
+    .ligation-name{
+        position: absolute;
+        padding-top: 6rem;
+        padding-left: 1.5rem;
+        font-size: 3.5rem;
+
+    }
+
+    .nickname{
+        position: absolute;
+        padding-top: 16rem;
+    }
+
+    .identification{
+        position: absolute;
+        top: 13rem;
+    }
+
+    .quadrado{
+        top: 25rem;
+        left: 40rem;
+    }
+
+    .card-group-card{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 56rem;
+        height: 85rem;
+        top: 0rem;
+        left: 0rem;
+        border-radius: 0rem;
+        z-index: 2;
+    }
+
+    .rogerioverso{
+        font-size: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .card{
+        width: 45rem;
+        height: 45rem;
+        margin-left: 5.5rem;
+
+    }
+
+    .card h2, .sobre h2{
+        font-size: 3rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+    .card p, .sobre p{
+        font-size: 2rem;
+        padding-left: 1rem;
+    }
+
+    .card-redes{
+        font-size: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .avatar3{
+        top: 10rem;
+        left: -14rem;
+    }
+
+    .avatar3 img{
+        height: 50rem;
+        width: 50rem;
+        
+    }
+
+    .sobre{
+        top: 4rem;
+        left: 23rem;
+        height: 60rem;
+        width: 45rem;
+    }
+
+    .about-resume{
+        top: 25rem;
+        border-radius: 0rem;
+        width: 56rem;
+        height: 70rem;
+        left: 0rem;
+        z-index: 1;
+    }
+
+
+    .footer-rodape{
+
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+    
+    }
+
+    .mapa-site, .social-icons-footer{
+        display: none;
+    }
+
+    .final-page-bg, .frase{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+      
+    .hamburger.open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+      
+    .hamburger.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+      
+    .hamburger.open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+      
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 2px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+      
+    .option-menu, .social-icons-header {
+        flex-direction: column;
+        list-style: none;
+        display: none;
+    }
+      
+    .option-menu li {
+        margin-right: 20px;
+    }
+        
+    .option-menu a {
+        text-decoration: none;
+        color: white;
+    }
   
+    .option-menu.show {
+        display: block;
+        background-color: rgb(17, 16, 16);
   
-  
+    }
+    
+    
+
+
+
+
+}
+
+
+
+
+
   
   
