@@ -460,7 +460,7 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
 }
 
 @media (min-width: 10px) and (max-width: 580px) {
-  
+
 .hi{
     font-size: 4rem;
 }
@@ -502,12 +502,14 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
     padding: 0;
     padding-top: 3.5rem;
     border-radius: 0px;
+    box-shadow: none;
 }
 
 .about-resume{
     margin: 0;
     padding: 0;
     border-radius: 0px;
+    box-shadow: none;
 }
 
 .skill-lang{
@@ -649,9 +651,10 @@ body {
 }
 
 .option-menu-low a {
+    font-size: 1.5rem;
     text-decoration: none;
     color: white;
-    padding: 0.2rem 1rem 0.2rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     
 }
 
@@ -669,6 +672,7 @@ body {
     padding-top: 5rem;
     padding-left: 2.2rem;
     background-color: #181c23;
+    z-index: 9;
     
 }
 
