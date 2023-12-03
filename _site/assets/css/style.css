@@ -459,6 +459,12 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
     padding: 2rem;
 }
 
+.cabeca-post h3{
+    color: #FFF;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+}
+
 .grid{
     display: flex;
     flex-wrap: wrap;
@@ -501,7 +507,67 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
     padding-right: 1rem;
 }
 
+.section-pages-post{
+    background-color: var(--cor-tema);
+    padding-top: 4.3rem;
+}
 
+.dados-curriculo{
+    padding-top: 6rem; 
+    padding-bottom: 3rem;   
+    border: 1px solid var(--cor-header);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--cor-header);
+}
+
+.card-curriculo{
+    display: grid;
+    grid-template-areas: 
+        "lado-esquerdo lado-esquerdo lado-direito lado-direito"
+        "lado-esquerdo lado-esquerdo lado-direito lado-direito"
+        "lado-esquerdo lado-esquerdo lado-direito lado-direito"
+        "lado-esquerdo lado-esquerdo lado-direito lado-direito";
+    color: #FFF;
+}
+
+.card-curriculo p{
+    color: #acabab;
+}
+
+.card-curriculo i{
+    color: #FFF;
+}
+
+.evolution{
+    padding: 0.5rem 0;
+}
+
+.nome-curriculo-dados i{
+    padding: 0.8rem 0;
+}
+
+.lado-esquerdo{
+    grid-area: lado-esquerdo;
+    padding-left: 10rem;
+    padding-right: 6rem;
+}
+
+.lado-direito{
+    grid-area: lado-direito;
+    padding-right: 10rem;
+}
+
+.lado-direito h2, .lado-direito h3, .lado-direito p{
+    padding-bottom: 1rem;
+}
+
+.lado-direito h4{
+    padding-bottom: 1rem;
+}
 
 @keyframes carouselAnimation {
     0% { opacity: 1; transform: translateX(0%); }

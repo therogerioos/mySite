@@ -1,6 +1,7 @@
 ---
 layout: style
 title: Portfólio
+
 ---
 
 <h1>Portfólio</h1>

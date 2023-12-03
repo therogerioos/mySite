@@ -70,7 +70,7 @@ function goToPreviousPage(){
 };
 
 function goToNextPagett() {
-  var pagination = document.getElementById('pagination-link');
+  var pagination = document.getElementById('pagination-link-tt');
   var pageLast = parseInt(pagination.dataset.lastPage);
   var numberPage = parseInt(pagination.dataset.pageNumber);
 
@@ -99,7 +99,7 @@ function goToNextPagett() {
 };
 
 function goToPreviousPagett(){
-  var pagination = document.getElementById('pagination-link');
+  var pagination = document.getElementById('pagination-link-tt');
   var pageLast = parseInt(pagination.dataset.lastPage);
   var numberPage = parseInt(pagination.dataset.pageNumber);
 
@@ -214,4 +214,23 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open");
   navLinks.classList.toggle("show");
 });
+
+
+function verificarTutoriais(){
+  let myPage = document.querySelector('.pagination');
+  if(myPage) {
+    let links = myPage.querySelectorAll('a');
+    let valorMax = Number.MIN_SAFE_INTEGER;
+    links.forEach(function(link) {
+      let numeroVer = parseInt(link.getAttribute('data-page-number'));
+      if(!isNaN(numeroVer) && numeroVer > valorMax) {
+        valorMax = numeroVer;
+      }
+    }
+    );
+    console.log("O valor máximo é: ", valorMax);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', verificarTutoriais);
 

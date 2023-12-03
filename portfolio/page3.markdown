@@ -3,11 +3,12 @@ layout: style
 title: Portfólio
 page_number: 3
 last_page: 0
-
+pagemax: 4
 ---
 
 <div class="cabeca-post">
   <h1 class="name-page">Portfólio</h1>
+  <h3>Página {{ page.page_number }} de {{ page.pagemax }}</h3>
   <div class="pagination">
             <a href="#" class="page-link voltar" onclick="goToPreviousPage()"><i class="fa-solid fa-angles-left"></i> Voltar</a>
             <a href="#" class="page-link ir" id="pagination-link" data-page-number="{{ page.page_number }}" data-last-page="{{ page.last_page }}" onclick="goToNextPage()">Próximo <i class="fa-solid fa-angles-right"></i></a>
