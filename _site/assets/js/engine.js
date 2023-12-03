@@ -228,7 +228,6 @@ function verificarTutoriais(){
       }
     }
     );
-    console.log("O valor máximo é: ", valorMax);
   }
 }
 

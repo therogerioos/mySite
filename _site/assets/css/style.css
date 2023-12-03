@@ -510,6 +510,9 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
 .section-pages-post{
     background-color: var(--cor-tema);
     padding-top: 4.3rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+
 }
 
 .dados-curriculo{
@@ -534,7 +537,7 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
     color: #FFF;
 }
 
-.card-curriculo p{
+.card-curriculo p, .text-about-grand p{
     color: #acabab;
 }
 
@@ -567,6 +570,35 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
 
 .lado-direito h4{
     padding-bottom: 1rem;
+}
+
+.dados-about{
+    display: grid;
+    grid-template-areas: 
+        "card-about card-about card-about card-about"
+        "card-about card-about card-about card-about"
+        "card-about card-about card-about card-about";
+    color: #FFF;
+    padding-top: 4rem; 
+    padding-bottom: 6rem;
+    padding-left: 5rem;
+    padding-right: 5rem;   
+    border: 1px solid var(--cor-header);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--cor-header);
+    
+}
+
+.card-about-grand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: card-about;
+    
 }
 
 @keyframes carouselAnimation {
