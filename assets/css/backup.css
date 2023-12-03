@@ -1,0 +1,814 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family:'League Spartan', sans-serif;
+
+}
+
+@media (min-width: 1280px){
+.header-menu{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.header-phone{
+    display: none;
+}
+
+.name-logo{
+    color: #FFF;
+    text-shadow: 8px 5px 16px 0px rgba(99, 98, 98, 0.306);
+    font-family: League Spartan;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 4rem;
+}
+
+.option-menu a, .social-icons-header a{
+    color: #FFF;
+}
+
+.option-menu{
+    padding-left: 7rem;
+    
+}
+
+.item{
+    margin-right: 2rem;
+    font-size: 1.1rem;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: border-top 0.2s linear;
+    transition: border-bottom 0.2s linear;
+}
+
+.item:hover {
+    color: #fff;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.social-icons-header{
+    padding-left: 7rem;
+}
+
+.social-icons-header a{
+    padding-right: 1rem;
+    font-size: 1.3rem;
+    transition: font-size 0.2s linear;
+}
+
+.social-icons-header a:hover{
+    font-size: 1.8rem;
+}
+
+.section-pages-1{
+    position: relative;
+    color: #fff;
+    height: 32rem;
+    padding-top: 6.5rem;
+    padding-left: 3rem;
+    background: rgb(97,98,101);
+    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
+    border-bottom: 2px solid #ffffff;
+}
+
+.hi{
+    font-size: 8rem;
+}
+
+.name-persona{
+    font-size: 4rem;
+}
+
+.ligation-name{
+    font-size: 2rem;
+}
+
+.nickname{
+    font-size: 5rem;
+    font-weight: 700;
+    width: 30ch;
+    overflow: hidden;
+    animation: escrever 3s steps(30) infinite alternate-reverse;
+}
+
+@keyframes escrever {
+    from {
+      width: 0ch; 
+    }
+    to {
+      width: 15ch; 
+    }
+}
+
+.identification{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.quadrado{
+    position: absolute;
+    top: 6rem;
+    left: 45rem;
+    height: 30rem;
+    width: 29rem;
+    border-radius: 28px;
+    background-image: url(../images/avatar-office-1.svg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:  -5px 5px 10px #424242,
+             5px -5px 10px #4a4747;
+}
+
+.conteudo-por-cima {
+    position: absolute;
+    top: 7.7rem;
+    left: 4.9rem;
+    width: 100%;
+    height: 100%;
+}
+  
+.conteudo-por-cima img {
+    width: 25rem;
+    height: 25rem;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(61, 60, 60); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #504f4f; 
+}
+
+.radio-nav{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 10;
+    position: fixed;
+    top: 16rem;
+    left: 76rem;
+
+}
+
+.radio-nav input[type="radio"] {
+    appearance: none; /* Remover o estilo padrão do radio button */
+    position: relative;
+    width: 26px; /* Ajustar a largura para aumentar o tamanho */
+    height: 26px; /* Ajustar a altura para aumentar o tamanho */
+    border: 2px solid #535252; /* Cor da borda do radio button */
+    border-radius: 50%; /* Formato circular */
+    cursor: pointer;
+}
+
+.radio-nav input[type="radio"]:checked {
+    background-color: #797878; /* Cor de preenchimento do radio button quando marcado */
+}
+
+/* Esconda todas as seções do conteúdo por padrão */
+#conteudo > section {
+    display: none;
+}
+  
+  /* Mostre a seção correspondente quando o input radio estiver marcado */
+input#parte1:checked ~ #conteudo > .section-pages-1,
+input#parte2:checked ~ #conteudo > .section-pages-2,
+input#parte3:checked ~ #conteudo > .section-pages-3 {
+    display: block;
+}
+
+
+.section-pages-2{
+    position: relative;
+    color: #fff;
+    height: 32rem;
+    padding-top: 6.5rem;
+    padding-left: 3rem;
+    background: rgb(97,98,101);
+    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
+    border-bottom: 2px solid #ffffff;
+}
+
+.avatar2 {
+    position: absolute;
+    top: 13.5rem;
+    left: -2rem;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.avatar2 img {
+    width: 25rem;
+    height: 25rem;
+    
+}
+
+.card-group-card{
+    position: absolute;
+    top: 6rem;
+    left: 3.2rem;
+    height: 30rem;
+    width: 53rem;
+    border-radius: 28px;
+    background-image: url(../images/rogerioverso.svg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:  -5px 5px 10px #424242,
+             5px -5px 10px #4a4747;
+    display: flex;
+    align-items: center;
+    padding-left: 18rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 20px;
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    background-color: #ffff;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 8;
+}
+  
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.card a{
+    color: #1f1e1e;
+    transition: border-bottom 0.2s linear;
+    
+}
+
+.card a:hover{
+    border-bottom: 2px solid #1f1e1e;
+}
+
+.rogerioverso{
+    position: absolute;
+    top: 9rem;
+    left: 5.5rem;
+    width: 50%;
+    height: 50%;
+    z-index: 5;
+}
+
+.card-redes{
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+
+.icon-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-redes i{
+    margin-right: 1rem;
+}
+
+.redes a:not(.card){
+    border-bottom: 0px;
+}
+
+.section-pages-3{
+    position: relative;
+    color: #fff;
+    height: 32rem;
+    padding-top: 6.5rem;
+    padding-left: 3rem;
+    background: rgb(97,98,101);
+    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
+    border-bottom: 2px solid #ffffff;
+}
+
+.avatar3 {
+    position: absolute;
+    top: 7.3rem;
+    left: 1rem;
+    width: 45%;
+    height: 45%;
+    z-index: 5;
+}
+
+.avatar3 img {
+    width: 20rem;
+    height: 25rem;
+    
+}
+
+.about-resume{
+    position: absolute;
+    top: 6.1rem;
+    left: 3.2rem;
+    height: 30rem;
+    width: 53rem;
+    border-radius: 28px;
+    background-image: url(../images/avatar-party-1.svg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:  -5px 5px 10px #424242,
+             5px -5px 10px #4a4747;
+    display: flex;
+    align-items: center;
+    padding-left: 18rem;
+    flex-wrap: wrap;
+}  
+
+
+.sobre {
+    position: absolute;
+    top: 3rem;
+    left: 23rem;
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+    margin: 20px;
+    background-color: #ffff;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 8;
+}
+  
+
+.sobre h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+
+.sobre p {
+    font-size: 16px;
+    color: #555;
+}
+
+.sobre a{
+    color: #1f1e1e;
+    transition: border-bottom 0.2s linear;
+    
+}
+
+.sobre a:hover{
+    border-bottom: 2px solid #1f1e1e;
+}
+
+.footer-rodape{
+    position: relative;
+    background-color: black;
+    color: #FFF;
+    height: 10rem;
+    display: flex;
+}
+
+.final-page-bg{
+    padding-left: 3rem;
+    padding-top: 2.0rem;
+}
+
+.footer-name-logo{
+    font-family: League Spartan;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.mapa-site{
+    display: flex;
+    padding-top: 3.6rem;
+    padding-left: 7rem;
+}
+
+.mapa-site h4{
+    padding-right: 2rem;
+}
+
+.social-icons-footer a{
+    color: #FFF;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.social-icons-footer{
+    padding-top: 3.5rem;
+    padding-left: 5.5rem;
+}
+
+.frase{
+    position: absolute;
+    top: 7.4rem;
+    left: 32rem;
+    font-style: italic;
+}
+
+.section-pages{
+    position: relative;
+}
+
+.name-page{
+    position: absolute;
+    top: 5rem;
+}
+
+.grid{
+    position: relative;
+    color: #fff;
+    height: 30rem;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    padding-left: 0.2rem;
+    background: rgb(97,98,101);
+    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
+    border-bottom: 2px solid #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 26rem);
+    
+}
+
+.card-post {
+    padding: 20px;
+    width: 350px;
+    height: 150px;
+    margin: 20px;
+    background-color: #ffff;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.card-post img{
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+    height: 7rem;
+    width: 7rem;
+}
+
+.text-post{
+    padding-left: 8rem;
+    z-index: 8;
+}
+
+.title-post{
+    color: #1f1e1e; 
+    transition: color 0.2s linear;   
+}
+
+.title-post:hover{
+    color: #fcfafa; 
+}
+
+.text-post h4{
+    padding-top: 0.5rem;
+    color: #1e1d1d;
+    font-weight: 400;
+}
+  
+.pagination {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5.6rem;
+
+}
+
+
+  .page-link {
+    display: inline-block;
+    background-color: #101010;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 0 3px;
+  }
+  
+.voltar{
+    margin-left: 2rem;
+}
+
+.ir{
+    margin-left: 64rem;
+}
+  .page-link i{
+    margin-top: 5px;
+  }
+  .page-link:hover {
+    background-color: #45a049;
+
+  }
+  
+  .page-link:active {
+    background-color: #007BFF;
+  }
+
+  .notfound{
+    position: absolute;
+    font-weight: 800;
+    font-size: 15rem;
+    left: 7rem;
+    top: 4rem;
+  }
+
+  .erro404{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .paragrafo1{
+    position: absolute;
+    left: 40rem;
+    top: 16rem;
+    font-size: 2.5rem;
+
+  }
+
+  .paragrafo2{
+    position: absolute;
+    left: 40rem;
+    top: 21.5rem;
+    font-size: 2.5rem;
+
+  }
+ 
+  
+  .section-pages-post{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    padding-top: 6.5rem;
+    padding-left: 3rem;
+    background: rgb(97,98,101);
+    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .card-post-text {
+    padding: 1rem 5rem 5rem;
+    width: 50rem;
+    height: 100%;
+    margin: 1rem 6.5rem 5rem;
+    background-color: #ffff;
+    background: rgba(243, 240, 240, 0.751);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #1c1a1a;
+
+}
+  
+.highlight {
+    background-color: #1f1e1e;
+    border: 1rem solid #595656;
+    border-radius: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 1rem 5rem 1rem 5rem;
+    font-family: Consolas, monospace;
+    font-size: 1rem;
+    line-height: 1.4;
+    overflow: auto;
+    color: #f8f1f1;
+    float: center;
+  }  
+
+.card-post-text h2 {
+    margin: 2rem 0rem 0.5rem 0rem;
+
+}
+
+.img-esquerda-post{
+    height: 15rem;
+    width: 15rem;
+    float: left;
+}
+
+.img-direita-post{
+    height: 15rem;
+    width: 15rem;
+    float: right;
+}
+
+.dados-curriculo{
+    position: relative;
+    height: 80rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+}
+
+.lado-direito{
+    position: absolute;
+    width: 60%;
+    margin-left: 22rem;
+
+}
+
+.lado-esquerdo{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid #595656;
+}
+
+.evolution{
+    width: 18rem;
+}
+
+.total {
+    width: 100%;
+    height: 20px; /* Ajuste conforme necessário */
+    border: 2px solid #595656;
+    border-radius: 10px;
+    background-color: lightgray; /* Cor de fundo da barra de progresso */
+    overflow: hidden;
+  }
+  
+.progress{
+    padding: 2px 5px 0px;
+    background-color: green;
+    height: 100%;
+    transition: width 0.3s ease; /* Transição suave da largura */
+}
+
+.nome-curriculo-dados p, .progresso-skill{
+    padding: 2px 1px 2px;
+}
+
+.evolution p{
+    padding: 10px 1px 2px;
+
+}
+
+.nome-curriculo-dados i{
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.work-function-date{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.work-function{
+    padding-top: 20px;
+
+}
+
+.empilhado {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+}
+  
+/* Estilos para telas entre 320px e 940px */
+@media (min-width: 310px) and (max-width: 940px) {
+    body{
+        width: 100%;
+        height: 100%;
+    }
+    
+    header {
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        width: 52.6rem;
+        height: 7rem;
+    }
+
+    .name-logo {
+        color: #FFF;
+        text-shadow: 8px 5px 16px 0px rgba(99, 98, 98, 0.306);
+        font-family: League Spartan;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    /* Style the navigation menu */
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+    }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+  
+  /* Style navigation menu links */
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+  
+  /* Style the hamburger menu */
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+  
+  /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+  
+  /* Style the active link (or home/logo) */
+    .active {
+        background-color: #04AA6D;
+        color: white;
+    }
+
+    .social-icons-header{
+        display: none;
+    }
+
+    .option-menu{
+        display: none;
+    }
+    
+    
+
+
+
+
+}
+
+
+
+
+
+  
+  

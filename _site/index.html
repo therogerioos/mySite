@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="black">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" type="image/png" href="../assets/images/avatar-1b.png">
@@ -14,24 +13,34 @@
         <div class="name-logo">
             THEROGERIOOS
         </div>
-        <div class="option-menu">
-            <a class="item" href="/home">Página Inicial</a>
-            <a class="item" href="/portfolio/page1">Portfólio</a>
-            <a class="item" href="/tutoriais/page1">Tutoriais</a>
-            <a class="item" href="/curriculo">Currículo</a>
-            <a class="item" href="#">Sobre mim</a>
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
+        <nav class="nav">
+            <ol class="nav-menu">
+                <a class="item" href="/home">Página Inicial</a>
+                <a class="item" href="/portfolio/page1">Portfólio</a>
+                <a class="item" href="/tutoriais/page1">Tutoriais</a>
+                <a class="item" href="/curriculo">Currículo</a>
+                <a class="item" href="#">Sobre mim</a>
+            </ol>
+        </nav>
         <div class="social-icons-header">
-            <a href="mailto:therogerioos@gmail.com?subject=Fale Conosco&body=Olá, THEROGERIOOS Team"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://github.com/therogerioos" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rogeriooliveiradossantos/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>
+            <a href="https://www.linkedin.com/in/rogeriooliveiradossantos" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/therogerioos" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:therogerioos@gmail.com?subject=Fale Conosco&body=Olá, THEROGERIOOS Team"><i class="fa-solid fa-envelope"></i></a>  
+        </div> 
     </header>
-    <section class="section-pages-1">
+    <ul class="option-menu-low" id="nav-links">
+        <li><a class="item" href="/home">Página Inicial</a></li>
+        <li><a class="item" href="/portfolio/page1">Portfólio</a></li>
+        <li><a class="item" href="/tutoriais/page1">Tutoriais</a></li>
+        <li><a class="item" href="/curriculo">Currículo</a></li>
+        <li><a class="item" href="#">Sobre mim</a></li>
+    </ul>
+    <aside class="barra-lateral">
         <div class="radio-nav">
             <form>
                 <input type="radio" class="nav" id="parte1" name="nav" value="section-pages-1">
@@ -40,8 +49,12 @@
                 <label for="parte2"></label><br>
                 <input type="radio" class="nav" id="parte3" name="nav" value="section-pages-3">
                 <label for="parte3"></label><br>
+                <input type="radio" class="nav" id="parte4" name="nav" value="section-pages-4">
+                <label for="parte4"></label><br>
               </form>
         </div>
+    </aside>
+    <section class="section-pages-1">
         <div class="identification">
             <p class="hi">Olá,</p><br>
             <p class="name-persona">Eu sou Rogerio Oliveira,</p><br>
@@ -55,12 +68,82 @@
         </div>
     </section>
     <section class="section-pages-2">
-        <div class="rogerioverso">
-            <h2>Veja na Rogerioverso</h2>
+        <div class="skill-lang">
+            <h2>Minhas principais habilidades em:</h2>
         </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div id="cr-1" class="carousel-item">
+                    <i class="fa-solid fa-chevron-left seta-left"></i>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-python"></i>
+                        <a>Python</a>
+                    </div>
+                    <div class="def-carousel">
+                        <i class="fa-solid fa-database"></i>
+                        <a>SQL</a>
+                    </div>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-microsoft"></i>
+                        <a>Power BI</a>
+                    </div>
+                    <i class="fa-solid fa-chevron-right seta-right"></i>
+                </div>
+                <div id="cr-2" class="ocultando-carousel">
+                    <i class="fa-solid fa-chevron-left seta-left"></i>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-html5"></i>
+                        <a>HTML5</a>
+                    </div>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <a>CSS3</a>
+                    </div>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-square-js"></i>
+                        <a>Javascript</a>
+                    </div>
+                    <i class="fa-solid fa-chevron-right seta-right"></i>
+                </div>
+                <div id="cr-3" class="ocultando-carousel">
+                    <i class="fa-solid fa-chevron-left seta-left"></i>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-react"></i>
+                        <a>React</a>
+                    </div>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-java"></i>
+                        <a>Java</a>
+                    </div>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-docker"></i>
+                        <a>Docker</a>
+                    </div>
+                    <i class="fa-solid fa-chevron-right seta-right"></i>
+                </div>
+                <div id="cr-4" class="ocultando-carousel">
+                    <i class="fa-solid fa-chevron-left seta-left"></i>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <a>Git</a>
+                    </div>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-github footer-redes"></i>
+                        <a>GitHub</a>
+                    </div>
+                    <div class="def-carousel">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <a>Bootstrap</a>
+                    </div>
+                    <i class="fa-solid fa-chevron-right seta-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-pages-3">
         <div class="card-group"> 
-            <div class="avatar2">
-                <img src="../assets/images/avatar-2.svg" alt="Avatar Acenando">
+            <div class="rogerioverso">
+                <h2>Veja na Rogerioverso</h2>
             </div>
             <div class="card-group-card">
                 <div class="card portfolio">
@@ -82,7 +165,7 @@
                         <a href="https://github.com/therogerioos" target="_blank">
                         <i class="fa-brands fa-github card-redes"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/rogeriooliveiradossantos/" target="_blank">
+                        <a href="https://www.linkedin.com/in/rogeriooliveiradossantos" target="_blank">
                         <i class="fa-brands fa-linkedin card-redes"></i>
                         </a>
                     </div>
@@ -90,11 +173,8 @@
             </div>    
         </div>
     </section>
-    <section class="section-pages-3">
+    <section class="section-pages-4">
         <div class="about-resume">
-            <div class="avatar3">
-                <img src="../assets/images/avatar-3.svg" alt="Avatar Acenando">
-            </div>
             <div class="card-about sobre">
                 <h2><a class="h2-sobre" href="#">Sobre mim</a></h2>
                 <p>Primeiramente, agradeço pela visita ao Rogerioverso. Eu criei uma aba com detalhamentos sobre quem sou, o que faço, meus planos e minhas áreas de estudo, apresentando um pouco da minha carreira profissional.
@@ -107,29 +187,29 @@
     <footer class="footer-rodape">
         <div class="final-page-bg">
             <h4>Desenvolvido por:</h4>
-            <div class="footer-name-logo">THEROGERIOOS</div>
+            <div class="footer-name-logo">
+                THEROGERIOOS
+            </div>
             <h5 class="copy">2023 @ Todos Direitos Reservados</h5>    
         </div>
-        <div class="mapa-site">
-            <h4 class="home">Página Inicial</h4>
-            <h4 class="port">Portfólio</h4>
-            <h4 class="tuto">Tutoriais</h4>
-            <h4 class="curri">Currículo</h4>
-            <h4 class="about">Sobre mim</h4>
-        </div>
-        <div class="frase">
-            "Seja o escritor de sua própria história!!"
+        <div class="central-info">
+            <div class="mapa-site">
+                <h4 class="home">Página Inicial</h4>
+                <h4 class="port">Portfólio</h4>
+                <h4 class="tuto">Tutoriais</h4>
+                <h4 class="curri">Currículo</h4>
+                <h4 class="about">Sobre mim</h4>
+            </div>
+            <div class="frase">
+                "Seja o escritor de sua própria história!!"
+            </div>
         </div>
         <div class="social-icons-footer">
+            <a href="https://www.linkedin.com/in/rogeriooliveiradossantos" target="_blank"><i class="fa-brands fa-linkedin footer-redes"></i></a>
+            <a href="https://github.com/therogerioos" target="_blank"><i class="fa-brands fa-github footer-redes"></i></a>
             <a href="mailto:therogerioos@gmail.com?subject=Fale Conosco&body=Olá, THEROGERIOOS Team"><i class="fa-solid fa-envelope footer-redes"></i></a>
-            <a href="https://github.com/therogerioos" target="_blank">
-                <i class="fa-brands fa-github footer-redes"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rogeriooliveiradossantos/" target="_blank">
-                <i class="fa-brands fa-linkedin footer-redes"></i>
-            </a>
         </div> 
     </footer>
-<script src="../assets/js/engine.js"></script>   
+    <script src="../assets/js/engine.js"></script>
 </body>
 </html>

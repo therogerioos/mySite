@@ -47,22 +47,22 @@ body {
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
     
-    .option-menu1 {
+    .option-menu {
       flex-direction: column;
       list-style: none;
       display: none;
     }
     
-    .option-menu1 li {
+    .option-menu li {
         margin-right: 20px;
       }
       
-      .option-menu1 a {
+      .option-menu a {
         text-decoration: none;
         color: white;
       }
 
-      .option-menu1.show {
+      .option-menu.show {
         display: block;
         background-color: rgb(17, 16, 16);
 

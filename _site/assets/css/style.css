@@ -3,148 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
+    box-sizing: border-box;
     font-family:'League Spartan', sans-serif;
-
 }
 
-.header-menu{
-    position: fixed;
-    width: 100%;
-    height: 75px;
-    background-color: black;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 100;
-}
-
-.header-phone{
-    display: none;
-}
-
-.name-logo{
-    color: #FFF;
-    text-shadow: 8px 5px 16px 0px rgba(99, 98, 98, 0.306);
-    font-family: League Spartan;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding-left: 4rem;
-}
-
-.option-menu a, .social-icons-header a{
-    color: #FFF;
-}
-
-.option-menu{
-    padding-left: 7rem;
-    
-}
-
-.item{
-    margin-right: 2rem;
-    font-size: 1.1rem;
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
-    transition: border-top 0.2s linear;
-    transition: border-bottom 0.2s linear;
-}
-
-.item:hover {
-    color: #fff;
-    border-top: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-}
-
-.social-icons-header{
-    padding-left: 7rem;
-}
-
-.social-icons-header a{
-    padding-right: 1rem;
-    font-size: 1.3rem;
-    transition: font-size 0.2s linear;
-}
-
-.social-icons-header a:hover{
-    font-size: 1.8rem;
-}
-
-.section-pages-1{
-    position: relative;
-    color: #fff;
-    height: 32rem;
-    padding-top: 6.5rem;
-    padding-left: 3rem;
-    background: rgb(97,98,101);
-    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
-    border-bottom: 2px solid #ffffff;
-}
-
-.hi{
-    font-size: 8rem;
-}
-
-.name-persona{
-    font-size: 4rem;
-}
-
-.ligation-name{
-    font-size: 2rem;
-}
-
-.nickname{
-    font-size: 5rem;
-    font-weight: 700;
-    width: 30ch;
-    overflow: hidden;
-    animation: escrever 3s steps(30) infinite alternate-reverse;
-}
-
-@keyframes escrever {
-    from {
-      width: 0ch; 
-    }
-    to {
-      width: 15ch; 
-    }
-}
-
-.identification{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.quadrado{
-    position: absolute;
-    top: 6rem;
-    left: 45rem;
-    height: 30rem;
-    width: 29rem;
-    border-radius: 28px;
-    background-image: url(../images/avatar-office-1.svg);
-    background-size: cover;
-    background-position: center;
-    box-shadow:  -5px 5px 10px #424242,
-             5px -5px 10px #4a4747;
-}
-
-.conteudo-por-cima {
-    position: absolute;
-    top: 7.7rem;
-    left: 4.9rem;
-    width: 100%;
-    height: 100%;
-}
-  
-.conteudo-por-cima img {
-    width: 25rem;
-    height: 25rem;
+:root{
+    --cor-tema: #232832;
+    --cor-header: #181c23;
 }
 
 ::-webkit-scrollbar {
@@ -163,6 +28,326 @@
     background: #504f4f; 
 }
 
+body{
+    display: grid;
+    grid-template-areas: 
+        "header header header header"
+        "section1 section1 section1 section1"
+        "section2 section2 section2 section2"
+        "section3 section3 section3 section3"
+        "section4 section4 section4 section4"
+        "footer footer footer footer";
+}
+
+.header-menu{
+    grid-area: header;
+    padding: 1rem;
+    background-color: #181c23;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.name-logo{
+    color: #fff;
+    font-family:'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.nav-menu a{
+    color: #fff;
+    font-family:'League Spartan', sans-serif;
+    text-decoration: none;
+    padding: 1.7rem 1rem 1.7rem 1rem;
+}
+
+.nav-menu a:hover{
+    background-color: #fff;
+    color: #181c23;
+}
+
+.social-icons-header a{
+    color: #FFF;
+    padding: 1.7rem 1rem 1.7rem 1rem;
+    font-size: 1.3rem;
+}
+
+.social-icons-header a:hover{
+    background-color: #fff;
+    color: #181c23;
+}
+
+.barra-lateral{
+    grid-area: aside;
+    position: fixed;
+    bottom: 50%;
+    right: 4%;
+    
+}
+
+.section-pages-1{
+    grid-area: section1;
+    background-color: var(--cor-tema);
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+
+.identification{
+    color: #fff;
+    font-family:'League Spartan', sans-serif;
+    padding-right: 2rem;
+}
+
+.quadrado{
+    width: 24rem;
+    height: 24rem;
+    border-radius: 28px;
+    background-image: url(../images/avatar-office-1.svg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:  -5px 5px 10px #424242,
+             5px -5px 10px #4a4747;
+}
+
+.conteudo-por-cima img{
+    margin-top: 0.3rem;
+    width: 24rem;
+    height: 24rem;
+
+}
+
+.hi{
+    font-size: 8rem;
+}
+
+.name-persona{
+    font-size: 3.5rem;
+}
+
+.ligation-name{
+    font-size: 2rem;
+}
+
+.nickname{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.section-pages-2{
+    grid-area: section2;
+    color: #fff;
+    background-color: var(--cor-tema);
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.carousel a{
+    color: #fff;
+}
+
+.section-pages-3{
+    grid-area: section3;
+    background-color: var(--cor-tema);
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.rogerioverso{
+    position: absolute;
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+    color: #fff;
+}
+
+
+.card-group-card{
+    margin: 2rem;
+    padding: 3rem;
+    border-radius: 28px;
+    background-image: url(../images/rogerioverso.svg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:  -5px 5px 10px #424242,
+             5px -5px 10px #4a4747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 1rem;
+    width: 25rem;
+    height: 10rem;
+    margin: 1rem;
+    background-color: #ffff;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 8;
+}
+  
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+}
+  
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    
+}
+
+.card a{
+    color: #1f1e1e;
+    transition: border-bottom 0.2s linear;
+    text-decoration: none;
+}
+
+.card a:hover{
+    border-bottom: 2px solid #1f1e1e;
+}
+
+.card-redes{
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+.icon-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-redes i{
+    margin-right: 1rem;
+}
+
+.redes a:not(.card){
+    border-bottom: 0px;
+}
+
+.section-pages-4{
+    grid-area: section4;
+    background-color: var(--cor-tema);
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.about-resume{
+    margin: 2rem;
+    padding: 3rem;
+    border-radius: 28px;
+    background-image: url(../images/avatar-party-1.svg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:  -5px 5px 10px #424242,
+             5px -5px 10px #4a4747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sobre{
+    padding: 2rem;
+    width: 60%;
+    height: 100%;
+    margin: 1rem;
+    background-color: #ffff;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 8;
+}
+
+.sobre h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+}
+  
+
+.sobre p {
+    font-size: 16px;
+    color: #555;
+    
+}
+
+.sobre a{
+    color: #1f1e1e;
+    transition: border-bottom 0.2s linear;
+    text-decoration: none;
+}
+
+.sobre a:hover{
+    border-bottom: 2px solid #1f1e1e;
+}
+
+.footer-rodape{
+    grid-area: footer;
+    background-color:var(--cor-header);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: #fff;
+    padding: 3rem;
+    flex-wrap: wrap;
+}
+
+.footer-name-logo{
+    font-weight: 700;
+    font-size: 1.7rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.mapa-site{
+    display: flex;
+    justify-content: center;
+}
+
+.mapa-site h4{
+    padding: 1rem 2rem 1rem 0rem;
+}
+
+.frase{
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons-footer a{
+    color: #FFF;
+    font-size: 2rem;
+    padding-right: 1.5rem;
+}
+
+.social-icons-footer{
+    padding-top: 1.5rem;
+}
+
 .radio-nav{
     position: absolute;
     display: flex;
@@ -170,8 +355,8 @@
     justify-content: flex-end;
     z-index: 10;
     position: fixed;
-    top: 16rem;
-    left: 76rem;
+    top: 30%;
+    right: 5%;
 
 }
 
@@ -202,729 +387,310 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
 }
 
 
-.section-pages-2{
-    position: relative;
-    color: #fff;
-    height: 32rem;
-    padding-top: 6.5rem;
-    padding-left: 3rem;
-    background: rgb(97,98,101);
-    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
-    border-bottom: 2px solid #ffffff;
+.ocultando-carousel{
+    display: none;
 }
 
-.avatar2 {
-    position: absolute;
-    top: 13.5rem;
-    left: -2rem;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-}
-
-.avatar2 img {
-    width: 25rem;
-    height: 25rem;
-    
-}
-
-.card-group-card{
-    position: absolute;
-    top: 6rem;
-    left: 3.2rem;
-    height: 30rem;
-    width: 53rem;
-    border-radius: 28px;
-    background-image: url(../images/rogerioverso.svg);
-    background-size: cover;
-    background-position: center;
-    box-shadow:  -5px 5px 10px #424242,
-             5px -5px 10px #4a4747;
-    display: flex;
-    align-items: center;
-    padding-left: 18rem;
-    flex-wrap: wrap;
-}
-
-.card {
-    padding: 20px;
-    width: 300px;
-    height: 150px;
-    margin: 20px;
-    background-color: #ffff;
-    background: rgba(255, 255, 255, 0.47);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.2px);
-    -webkit-backdrop-filter: blur(6.2px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 8;
-}
-  
-
-.card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-  
-
-.card p {
-    font-size: 16px;
-    color: #555;
-}
-
-.card a{
-    color: #1f1e1e;
-    transition: border-bottom 0.2s linear;
-    
-}
-
-.card a:hover{
-    border-bottom: 2px solid #1f1e1e;
-}
-
-.rogerioverso{
-    position: absolute;
-    top: 9rem;
-    left: 5.5rem;
-    width: 50%;
-    height: 50%;
-    z-index: 5;
-}
-
-.card-redes{
-    padding-top: 2rem;
-    font-size: 2rem;
-}
-
-
-.icon-redes{
+.carousel-item{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.icon-redes i{
-    margin-right: 1rem;
-}
-
-.redes a:not(.card){
-    border-bottom: 0px;
-}
-
-.section-pages-3{
-    position: relative;
-    color: #fff;
-    height: 32rem;
-    padding-top: 6.5rem;
-    padding-left: 3rem;
-    background: rgb(97,98,101);
-    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
-    border-bottom: 2px solid #ffffff;
-}
-
-.avatar3 {
-    position: absolute;
-    top: 7.3rem;
-    left: 1rem;
-    width: 45%;
-    height: 45%;
-    z-index: 5;
-}
-
-.avatar3 img {
-    width: 20rem;
-    height: 25rem;
     
 }
 
-.about-resume{
-    position: absolute;
-    top: 6.1rem;
-    left: 3.2rem;
-    height: 30rem;
-    width: 53rem;
-    border-radius: 28px;
-    background-image: url(../images/avatar-party-1.svg);
-    background-size: cover;
-    background-position: center;
-    box-shadow:  -5px 5px 10px #424242,
-             5px -5px 10px #4a4747;
+
+.def-carousel{
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-left: 18rem;
-    flex-wrap: wrap;
-}  
-
-
-.sobre {
-    position: absolute;
-    top: 3rem;
-    left: 23rem;
-    padding: 20px;
-    width: 600px;
-    height: 300px;
-    margin: 20px;
-    background-color: #ffff;
-    background: rgba(255, 255, 255, 0.47);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.2px);
-    -webkit-backdrop-filter: blur(6.2px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 8;
-}
-  
-
-.sobre h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-  
-
-.sobre p {
-    font-size: 16px;
-    color: #555;
-}
-
-.sobre a{
-    color: #1f1e1e;
-    transition: border-bottom 0.2s linear;
-    
-}
-
-.sobre a:hover{
-    border-bottom: 2px solid #1f1e1e;
-}
-
-.footer-rodape{
-    position: relative;
-    background-color: black;
-    color: #FFF;
-    height: 10rem;
-    display: flex;
-}
-
-.final-page-bg{
-    padding-left: 3rem;
-    padding-top: 2.0rem;
-}
-
-.footer-name-logo{
-    font-family: League Spartan;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-}
-
-.mapa-site{
-    display: flex;
-    padding-top: 3.6rem;
-    padding-left: 7rem;
-}
-
-.mapa-site h4{
+    flex-direction: column;
+    padding-left: 2rem;
     padding-right: 2rem;
 }
 
-.social-icons-footer a{
-    color: #FFF;
+.def-carousel i{
+    font-size: 8rem;
+    padding-bottom: 0.5rem;
+}
+
+.skill-lang{
+    padding-left: 6rem;
+    padding-bottom: 8rem;
+}
+
+.seta-right{
+    font-size: 4rem;
+    padding-left: 2rem;
+    animation: moveRight 0.5s infinite alternate; 
+}
+
+.seta-left{
+    font-size: 4rem;
+    padding-right: 2rem;
+    animation: moveLeft 0.5s infinite alternate; 
+}
+
+
+.topnav, .option-menu-low, .option-menu-low a {
+    display: none;
+}
+
+@keyframes carouselAnimation {
+    0% { opacity: 1; transform: translateX(0%); }
+    50% { opacity: 0.5; transform: translateX(-5%); }
+    100% { opacity: 0; transform: translateX(-10%); }
+}
+
+@keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-30%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(30%);
+    }
+}
+
+@media (min-width: 10px) and (max-width: 580px) {
+  
+.hi{
+    font-size: 4rem;
+}
+    
+.name-persona{
+    font-size: 2rem;
+}
+
+.ligation-name{
+    font-size: 1.5rem;
+}
+
+.nickname{
+    font-size: 3.5rem;
+}
+
+.quadrado{
+    padding-left: 0.5rem;
+}
+
+.def-carousel i{
+    font-size: 0rem;
+}
+
+.seta-right, .seta-left{
+    font-size: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.card-group-card{
+    margin: 0;
+    padding: 0;
+    padding-top: 3.5rem;
+    border-radius: 0px;
+}
+
+.about-resume{
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+}
+
+.skill-lang{
+    margin: 0;
+    padding: 0;
+    padding-left: 4.5rem;
+    padding-bottom: 5rem;
+}
+
+.section-pages-1{
+    padding-top: 6rem;
+}
+
+.section-pages-2, .section-pages-3, .section-pages-4{
+    margin: 0;
+    padding: 0;
+}
+
+.section-pages-2{
+    padding-bottom: 5rem;
+}
+
+.mapa-site{
+    font-size: 0.7rem;
+}
+
+}
+
+@media (min-width: 581px) and (max-width: 640px) {
+.identification{
+    padding-left: 2rem;
+}
+
+.hi{
+    font-size: 5rem;
+}
+
+.name-persona{
+    font-size: 3rem;
+}
+
+.sobre{
+    width: 80%;
+}
+
+.mapa-site{
+    font-size: 0.9rem;
+}
+
+}
+
+@media (max-width: 768px) {
+
+.identification{
+    padding-bottom: 2rem;
+}
+   
+.def-carousel i{
+    font-size: 5rem;
+}
+
+.seta-right, .seta-left{
     font-size: 2rem;
     padding: 1rem;
 }
 
-.social-icons-footer{
-    padding-top: 3.5rem;
-    padding-left: 5.5rem;
+.sobre{
+    width: 80%;
 }
 
-.frase{
-    position: absolute;
-    top: 7.4rem;
-    left: 32rem;
-    font-style: italic;
 }
 
-.section-pages{
-    position: relative;
-}
-
-.name-page{
-    position: absolute;
-    top: 5rem;
-}
-
-.grid{
-    position: relative;
-    color: #fff;
-    height: 30rem;
-    padding-top: 8rem;
+@media (max-width: 968px) {
+.identification{
     padding-bottom: 2rem;
-    padding-left: 0.2rem;
-    background: rgb(97,98,101);
-    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
-    border-bottom: 2px solid #ffffff;
-    display: grid;
-    grid-template-columns: repeat(3, 26rem);
-    
 }
 
-.card-post {
-    padding: 20px;
-    width: 350px;
-    height: 150px;
-    margin: 20px;
-    background-color: #ffff;
-    background: rgba(255, 255, 255, 0.47);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.2px);
-    -webkit-backdrop-filter: blur(6.2px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.sobre{
+    width: 80%;
+}
 
 }
 
-.card-post img{
-    position: absolute;
-    top: 2.5rem;
-    left: 1rem;
-    height: 7rem;
-    width: 7rem;
+@media (max-width: 1023px) {
+body {
+    overflow-x: hidden;
 }
 
-.text-post{
-    padding-left: 8rem;
-    z-index: 8;
-}
-
-.title-post{
-    color: #1f1e1e; 
-    transition: color 0.2s linear;   
-}
-
-.title-post:hover{
-    color: #fcfafa; 
-}
-
-.text-post h4{
-    padding-top: 0.5rem;
-    color: #1e1d1d;
-    font-weight: 400;
-}
-  
-.pagination {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5.6rem;
-
-}
-
-
-  .page-link {
+.option-menu-low, .option-menu-low a {
     display: inline-block;
-    background-color: #101010;
-    color: #fff;
-    text-align: center;
-    justify-content: center;
-    padding: 6px 12px;
-    text-decoration: none;
-    border-radius: 4px;
-    margin: 0 3px;
-  }
-  
-.voltar{
-    margin-left: 2rem;
 }
 
-.ir{
-    margin-left: 64rem;
+.name-logo {
+    z-index: 100;
 }
-  .page-link i{
-    margin-top: 5px;
-  }
-  .page-link:hover {
-    background-color: #45a049;
 
-  }
-  
-  .page-link:active {
-    background-color: #007BFF;
-  }
+.nav{
+    display: none;
+}
 
-  .notfound{
-    position: absolute;
-    font-weight: 800;
-    font-size: 15rem;
-    left: 7rem;
-    top: 4rem;
-  }
-
-  .erro404{
-    position: relative;
+.hamburger{
     display: flex;
     flex-direction: column;
-
-  }
-
-  .paragrafo1{
-    position: absolute;
-    left: 40rem;
-    top: 16rem;
-    font-size: 2.5rem;
-
-  }
-
-  .paragrafo2{
-    position: absolute;
-    left: 40rem;
-    top: 21.5rem;
-    font-size: 2.5rem;
-
-  }
- 
-  
-  .section-pages-post{
-    position: relative;
-    color: #fff;
-    height: 100%;
-    padding-top: 6.5rem;
-    padding-left: 3rem;
-    background: rgb(97,98,101);
-    background: radial-gradient(circle, rgba(97,98,101,1) 0%, rgba(33,32,32,1) 100%);
-    border-bottom: 2px solid #ffffff;
-  }
-
-  .card-post-text {
-    padding: 1rem 5rem 5rem;
-    width: 50rem;
-    height: 100%;
-    margin: 1rem 6.5rem 5rem;
-    background-color: #ffff;
-    background: rgba(243, 240, 240, 0.751);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.2px);
-    -webkit-backdrop-filter: blur(6.2px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #1c1a1a;
-
-}
-  
-.highlight {
-    background-color: #1f1e1e;
-    border: 1rem solid #595656;
-    border-radius: 1rem;
-    padding: 1rem 2rem 1rem 2rem;
-    margin: 1rem 5rem 1rem 5rem;
-    font-family: Consolas, monospace;
-    font-size: 1rem;
-    line-height: 1.4;
-    overflow: auto;
-    color: #f8f1f1;
-    float: center;
-  }  
-
-.card-post-text h2 {
-    margin: 2rem 0rem 0.5rem 0rem;
-
-}
-
-.img-esquerda-post{
-    height: 15rem;
-    width: 15rem;
-    float: left;
-}
-
-.img-direita-post{
-    height: 15rem;
-    width: 15rem;
-    float: right;
-}
-
-.dados-curriculo{
-    position: relative;
-    height: 80rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     
 }
 
-.lado-direito{
-    position: absolute;
-    width: 60%;
-    margin-left: 22rem;
-
+.hamburger.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
 }
 
-.lado-esquerdo{
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    border-right: 1px solid #595656;
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
 }
 
-.evolution{
-    width: 18rem;
+.hamburger.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
 }
 
-.total {
-    width: 100%;
-    height: 20px; /* Ajuste conforme necessário */
-    border: 2px solid #595656;
-    border-radius: 10px;
-    background-color: lightgray; /* Cor de fundo da barra de progresso */
-    overflow: hidden;
-  }
-  
-.progress{
-    padding: 2px 5px 0px;
-    background-color: green;
-    height: 100%;
-    transition: width 0.3s ease; /* Transição suave da largura */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.nome-curriculo-dados p, .progresso-skill{
-    padding: 2px 1px 2px;
-}
-
-.evolution p{
-    padding: 10px 1px 2px;
-
-}
-
-.nome-curriculo-dados i{
-    padding-top: 5px;
-    padding-right: 5px;
-}
-
-.work-function-date{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.work-function{
-    padding-top: 20px;
-
-}
-
-.hamburger {
-    display: none;
+.option-menu-low, .social-icons-header, .radio-nav {
     flex-direction: column;
-    cursor: pointer;
-  }
-  
-/* Estilos para telas entre 320px e 940px */
-@media (min-width: 310px) and (max-width: 940px) {
+    list-style: none;
+    display: none;
+}
 
-    .name-logo{
-        font-size: 60px;
-    }
+.option-menu-low{
+    padding-bottom: 0.5rem;
+}
 
-    .header-menu{
-        width: 75rem;
-        height: 10rem; 
-        position: fixed; 
-    }
+.option-menu-low li {
+    width: 50%;
+}
 
-    .section-pages-1{
-        width: 71.2rem;
-        height: 51rem;
-    }
-
-    .section-pages-2{
-        width: 71.2rem;
-        height: 51rem;
-
-    }
-
-    .section-pages-3{
-        padding-top: 50rem;
-    }
-
-    .radio-nav{
-        display: none;
-    }
-
-    .hi{
-        position: absolute;
-        font-size: 5.5rem;
-        padding-top: 1rem;
-        padding-left: 1.5rem;
-    }
-
-    .name-persona{
-        font-size: 5.5rem;
-        padding-left: 12.5rem;
-
-    }
-
-    .ligation-name{
-        position: absolute;
-        padding-top: 6rem;
-        padding-left: 1.5rem;
-        font-size: 3.5rem;
-
-    }
-
-    .nickname{
-        position: absolute;
-        padding-top: 16rem;
-    }
-
-    .identification{
-        position: absolute;
-        top: 13rem;
-    }
-
-    .quadrado{
-        top: 25rem;
-        left: 40rem;
-    }
-
-    .card-group-card{
-        flex-wrap: nowrap;
-        flex-direction: column;
-        width: 56rem;
-        height: 85rem;
-        top: 0rem;
-        left: 0rem;
-        border-radius: 0rem;
-        z-index: 2;
-    }
-
-    .rogerioverso{
-        font-size: 1.5rem;
-        left: 1.5rem;
-    }
-
-    .card{
-        width: 45rem;
-        height: 45rem;
-        margin-left: 5.5rem;
-
-    }
-
-    .card h2, .sobre h2{
-        font-size: 3rem;
-        padding-left: 1rem;
-        padding-top: 1rem;
-    }
-
-    .card p, .sobre p{
-        font-size: 2rem;
-        padding-left: 1rem;
-    }
-
-    .card-redes{
-        font-size: 4rem;
-        padding-bottom: 3rem;
-    }
-
-    .avatar3{
-        top: 10rem;
-        left: -14rem;
-    }
-
-    .avatar3 img{
-        height: 50rem;
-        width: 50rem;
-        
-    }
-
-    .sobre{
-        top: 4rem;
-        left: 23rem;
-        height: 60rem;
-        width: 45rem;
-    }
-
-    .about-resume{
-        top: 25rem;
-        border-radius: 0rem;
-        width: 56rem;
-        height: 70rem;
-        left: 0rem;
-        z-index: 1;
-    }
-
-
-    .footer-rodape{
-
-        margin: 0px;
-        padding: 0px;
-        position: absolute;
+.option-menu-low a {
+    text-decoration: none;
+    color: white;
+    padding: 0.2rem 1rem 0.2rem 1rem;
     
-    }
+}
 
-    .mapa-site, .social-icons-footer{
-        display: none;
-    }
+.option-menu-low a:hover{
+    background-color: #fff;
+    color: #181c23;
+    border-color: #181c23;
+    transform: translate(10px);
+}
 
-    .final-page-bg, .frase{
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-      
-    .hamburger.open .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 5px);
-    }
-      
-    .hamburger.open .bar:nth-child(2) {
-        opacity: 0;
-    }
-      
-    .hamburger.open .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -5px);
-    }
-      
-    .bar {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 2px 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-      
-    .option-menu, .social-icons-header {
-        flex-direction: column;
-        list-style: none;
-        display: none;
-    }
-      
-    .option-menu li {
-        margin-right: 20px;
-    }
-        
-    .option-menu a {
-        text-decoration: none;
-        color: white;
-    }
-  
-    .option-menu.show {
-        display: block;
-        background-color: rgb(17, 16, 16);
-  
-    }
+.option-menu-low.show {
+    position: fixed;
+    width: 100%;
+    display:block;
+    padding-top: 5rem;
+    padding-left: 2.2rem;
+    background-color: #181c23;
     
-    
+}
 
+::-webkit-scrollbar {
+    width: 1px;
+}
 
+}
 
+@media (min-width: 1440px) {
+
+.section-pages-1{
+    padding-top: 12rem;
+} 
+
+.section-pages-2{
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+}
+.section-pages-3{
+    padding-top: 8rem;
+}
+.section-pages-4{
+    padding-top: 9rem;
+    padding-bottom: 7rem;
+
+}
 
 }
 
 
-
-
-
-  
-  
