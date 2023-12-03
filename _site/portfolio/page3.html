@@ -13,31 +13,43 @@
         <div class="name-logo">
             THEROGERIOOS
         </div>
-        <div class="option-menu">
-            <a class="item" href="/home">Página Inicial</a>
-            <a class="item" href="/portfolio/page1">Portfólio</a>
-            <a class="item" href="/tutoriais/page1">Tutoriais</a>
-            <a class="item" href="/curriculo">Currículo</a>
-            <a class="item" href="#">Sobre mim</a>
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
+        <nav class="nav">
+            <ol class="nav-menu">
+                <a class="item" href="/home">Página Inicial</a>
+                <a class="item" href="/portfolio/page1">Portfólio</a>
+                <a class="item" href="/tutoriais/page1">Tutoriais</a>
+                <a class="item" href="/curriculo">Currículo</a>
+                <a class="item" href="#">Sobre mim</a>
+            </ol>
+        </nav>
         <div class="social-icons-header">
-            <a href="mailto:therogerioos@gmail.com?subject=Fale Conosco&body=Olá, THEROGERIOOS Team"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://github.com/therogerioos" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rogeriooliveiradossantos/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+            <a href="https://www.linkedin.com/in/rogeriooliveiradossantos" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/therogerioos" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:therogerioos@gmail.com?subject=Fale Conosco&body=Olá, THEROGERIOOS Team"><i class="fa-solid fa-envelope"></i></a>  
         </div>       
     </header>
+    <ul class="option-menu-low" id="nav-links">
+        <li><a class="item" href="/home">Página Inicial</a></li>
+        <li><a class="item" href="/portfolio/page1">Portfólio</a></li>
+        <li><a class="item" href="/tutoriais/page1">Tutoriais</a></li>
+        <li><a class="item" href="/curriculo">Currículo</a></li>
+        <li><a class="item" href="#">Sobre mim</a></li>
+    </ul>
   
     <section class="section-pages">
-        <h1 class="name-page">Portfólio</h1>
-<div class="grid">
-<div class="pagination">
+        <div class="cabeca-post">
+  <h1 class="name-page">Portfólio</h1>
+  <div class="pagination">
             <a href="#" class="page-link voltar" onclick="goToPreviousPage()"><i class="fa-solid fa-angles-left"></i> Voltar</a>
             <a href="#" class="page-link ir" id="pagination-link" data-page-number="3" data-last-page="0" onclick="goToNextPage()">Próximo <i class="fa-solid fa-angles-right"></i></a>
   </div>
+</div>
+<div class="grid">
   
     
   
@@ -106,13 +118,9 @@
             "Seja o escritor de sua própria história!!"
         </div>
         <div class="social-icons-footer">
+            <a href="https://www.linkedin.com/in/rogeriooliveiradossantos" target="_blank"><i class="fa-brands fa-linkedin footer-redes"></i></a>
+            <a href="https://github.com/therogerioos" target="_blank"><i class="fa-brands fa-github footer-redes"></i></a>
             <a href="mailto:therogerioos@gmail.com?subject=Fale Conosco&body=Olá, THEROGERIOOS Team"><i class="fa-solid fa-envelope footer-redes"></i></a>
-            <a href="https://github.com/therogerioos" target="_blank">
-                <i class="fa-brands fa-github footer-redes"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rogeriooliveiradossantos/" target="_blank">
-                <i class="fa-brands fa-linkedin footer-redes"></i>
-            </a>
         </div> 
     </footer>  
 <script src="../assets/js/engine.js"></script>
