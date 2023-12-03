@@ -461,6 +461,10 @@ input#parte3:checked ~ #conteudo > .section-pages-3 {
 
 @media (min-width: 10px) and (max-width: 580px) {
 
+body {
+    overflow-x: hidden;
+}
+
 .hi{
     font-size: 4rem;
 }
