@@ -485,17 +485,12 @@ body {
     padding-left: 0.5rem;
 }
 
-.carousel i{
-    font-size: 1rem;
-    
-}
-
-.icon-skill{
-    font-size: 0.2rem;
+.carousel-item i{
+    font-size: 2.5rem;
 }
 
 .seta-right, .seta-left{
-    font-size: 0.5rem;
+    font-size: 0.2rem;
     padding: 0;
     padding-left: 0.2rem;
     margin: 0;
@@ -519,6 +514,7 @@ body {
 .skill-lang{
     margin: 0;
     padding: 0;
+    padding-top: 3rem;
     padding-left: 4.5rem;
     padding-bottom: 5rem;
 }
@@ -555,6 +551,17 @@ body {
     font-size: 3rem;
 }
 
+.carousel-item i{
+    font-size: 4rem;
+}
+
+.seta-right, .seta-left{
+    font-size: 0.2rem;
+    padding: 0;
+    padding-left: 0.2rem;
+    margin: 0;
+}
+
 .sobre{
     width: 80%;
 }
@@ -565,12 +572,16 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 641px) and (max-width: 768px) {
 
 .identification{
     padding-bottom: 2rem;
 }
-   
+
+.skill-lang{
+    padding-left: 2rem;
+}
+
 .def-carousel i{
     font-size: 5rem;
 }
